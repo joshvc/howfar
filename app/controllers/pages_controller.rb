@@ -25,6 +25,10 @@ class PagesController < ApplicationController
       |Portland+OR
       |Las+Vegas+NV
       |Nashville+TN
+      |Montreal+QC
+      |Toronto+ON
+      |Huntsville+AL
+      |Greenville+SC
        &sensor=false&units=imperial")
     results = HTTParty.get(link)
     @starting = results["origin_addresses"].first
