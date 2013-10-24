@@ -11,3 +11,26 @@
  *= require_self
  *= require_tree .
  */
+
+ h1{
+  
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  margin: 10px;
+
+ }
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: #ede0ce;
+}
+
+td {
+  padding: 0 10px;
+}
+
+.header{
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 50px;
+}

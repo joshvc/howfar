@@ -1,5 +1,14 @@
-<h2>Distance From <%= @starting %></h2>
+<h2>Driving Distance From <%= @starting %></h2>
+<table>
 <% (0..(@destinations.count - 1)).each do |i| %>
-  <%= @destinations[i] %> - <%= @distances[i]["distance"]["text"] %> - <%= @distances[i]["duration"]["text"] %>
-  <br />
+<tr>
+  <td>
+    <%= @destinations[i] %>
+  </td>
+  <td>
+    <%= @distances[i]["distance"]["text"] %>
+  </td>
+  <td>
+    <%= @distances[i]["duration"]["text"] %>
+  </td>
 <% end %>
