@@ -1,4 +1,5 @@
+<h2>Distance From <%= @starting %></h2>
 <% (0..(@destinations.count - 1)).each do |i| %>
-  <%= @destinations[i].split(",").first %> - <%= @distances[i]["distance"]["text"] %> - <%= @distances[i]["duration"]["text"] %>
+  <%= @destinations[i] %> - <%= @distances[i]["distance"]["text"] %> - <%= @distances[i]["duration"]["text"] %>
   <br />
 <% end %>

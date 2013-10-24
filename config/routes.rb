@@ -1,8 +1,10 @@
 Howfar::Application.routes.draw do
 
   resources :pages do
-    get :search, on: :collection
+    post :search, on: :collection
   end
+
+  root to: 'pages#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
