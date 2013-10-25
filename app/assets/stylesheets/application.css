@@ -34,3 +34,8 @@ td {
   font-style: italic;
   font-size: 50px;
 }
+
+a, a:visited{
+  text-decoration: none;
+  color: #49606E;
+}

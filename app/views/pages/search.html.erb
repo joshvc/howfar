@@ -1,14 +1,17 @@
-<h2>Driving Distance From <%= @starting %></h2>
+<h2>Driving Distance From <%= @segments.first.origin %></h2>
 <table>
-<% (0..(@destinations.count - 1)).each do |i| %>
-<tr>
-  <td>
-    <%= @destinations[i] %>
-  </td>
-  <td>
-    <%= @distances[i]["distance"]["text"] %>
-  </td>
-  <td>
-    <%= @distances[i]["duration"]["text"] %>
-  </td>
+<% @segments.each do |segment| %>
+  <% unless segment.distance == "1 ft" %>
+    <tr>
+      <td>
+        <%= link_to segment.destination, segment.map_link %>
+      </td>
+      <td>
+        <%= segment.distance %>
+      </td>
+      <td>
+        <%= segment.drive_time %>
+      </td>
+    </tr>
+  <% end %>
 <% end %>
