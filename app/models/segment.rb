@@ -6,31 +6,8 @@ class Segment
   attr_accessor :origin
 
   def self.create_from_cities(query)
-    link = URI.escape("http://maps.googleapis.com/maps/api/distancematrix/json?origins=#{query}&destinations=
-      Atlanta+GA
-      |Orlando+FL
-      |Charleston+SC
-      |Denver+CO
-      |Washington+DC
-      |New+Orleans+LA
-      |New+York+NY
-      |Asheville+NC
-      |Chicago+IL
-      |Indianapolis+IN
-      |Jackson+WY
-      |Miami+FL
-      |Los+Angeles+CA
-      |Phoenix+AZ
-      |Austin+TX
-      |San+Francisco+CA
-      |Portland+OR
-      |Las+Vegas+NV
-      |Nashville+TN
-      |Montreal+QC
-      |Toronto+ON
-      |Huntsville+AL
-      |Greenville+SC
-       &sensor=false&units=imperial")
+    link = URI.escape("http://maps.googleapis.com/maps/api/distancematrix/json?origins=#{query}&destinations=#{CITIES}
+      &sensor=false&units=imperial")
     results = HTTParty.get(link)
     payload = []
     results["destination_addresses"].count.times do |i|
