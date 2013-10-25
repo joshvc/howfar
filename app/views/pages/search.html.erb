@@ -4,7 +4,7 @@
   <% unless segment.distance == "1 ft" %>
     <tr>
       <td>
-        <%= link_to segment.destination, segment.map_link %>
+        <%= link_to segment.destination, segment.map_link, target: "_blank" %>
       </td>
       <td>
         <%= segment.distance %>
