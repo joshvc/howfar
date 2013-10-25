@@ -21,7 +21,8 @@
  }
 body{
   font-family: 'Open Sans', sans-serif;
-  background: #ede0ce;
+  background: #282B2A;
+  color: #DEC315;
 }
 
 td {
@@ -37,5 +38,5 @@ td {
 
 a, a:visited{
   text-decoration: none;
-  color: #49606E;
+  color: #f4f4f4;
 }
