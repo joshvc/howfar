@@ -6,7 +6,15 @@ class Segment
   attr_accessor :origin
 
   def self.create_from_cities(query)
-    link = URI.escape("http://maps.googleapis.com/maps/api/distancematrix/json?origins=#{query}&destinations=#{CITIES}
+    Segment.build_response(query, CITIES)
+  end
+
+  def self.create_from_national_parks(query)
+    Segment.build_response(query, NATIONAL_PARKS)
+  end
+
+  def self.build_response(query, list)
+    link = URI.escape("http://maps.googleapis.com/maps/api/distancematrix/json?origins=#{query}&destinations=#{list}
       &sensor=false&units=imperial")
     results = HTTParty.get(link)
     payload = []

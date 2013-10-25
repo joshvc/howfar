@@ -5,6 +5,11 @@ class PagesController < ApplicationController
 
   def search
     @origin = params[:query].titleize
-    @segments = Segment.create_from_cities(params[:query])
+    case params[:list]
+    when 'cities'
+      @segments = Segment.create_from_cities(params[:query])
+    when 'parks'
+      @segments = Segment.create_from_national_parks(params[:query])
+    end
   end
 end
