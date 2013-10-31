@@ -19,8 +19,11 @@ CITIES = "Atlanta+GA
       |Nashville+TN
       |Montreal+QC
       |Toronto+ON
-      |Huntsville+AL
-      |Greenville+SC"
+      |Birmingham+AL
+      |St+Louis+MO
+      |Kansas+City+MO
+      |Seattle+WA
+      |Vancouver+BC"
 
 NATIONAL_PARKS = "Acadia+National+Park
 |Arches+National+Park
